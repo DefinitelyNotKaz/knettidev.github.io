@@ -1,0 +1,38 @@
+body {
+    background-color: #2f0a24;
+    margin: 0px;
+    overflow:hidden;
+}
+
+#logo {
+    position: absolute;
+    width: 8rem;
+    z-index: 1;
+    margin-top: 3em;
+    margin-left: 3em;
+}
+
+#sliced {
+    position: absolute;
+    border-bottom: 100vh solid #151414;
+    border-right: 26em solid transparent;
+    height: 0;
+    width: 49vw;
+    z-index: 0;
+    transform: scale(1, -1);
+}
+
+#typewriter {
+    margin-top: 0em;
+    position: absolute;
+    z-index: -2;
+    left: 55em;
+    color: white;
+    line-break: break-word;
+    line-height: 1.95em;
+    font-family: 'Ubuntu', sans-serif;
+    filter: blur(1.3px);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
