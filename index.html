@@ -47,8 +47,11 @@
     <script>
         var i = 0;
         var inserted = 0;
-        var cmds = ['whoami', 'finger kazuo'];
-        var elems = ['<div class="textline">kazuo</div>', '<div  class="textline">Login: kazuo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name: Alessandro Giannetti<br />Dedication: /student/it&nbsp;&nbsp;&nbsp;&nbsp; Location: /spain/valencia</div>']
+        var cmds = ['whoami', 'finger kazuo', 'ls /skills/', 'find kazuo'];
+        var elems = ['<div class="textline">kazuo</div>',
+         '<div  class="textline">Login: kazuo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name: Alessandro Giannetti<br />Dedication: /student/it&nbsp;&nbsp;&nbsp;&nbsp; Location: /spain/valencia</div>',
+        '<div class="textline">CSharp/&nbsp;&nbsp;&nbsp; Python/&nbsp;&nbsp;&nbsp;&nbsp; HTML/&nbsp;&nbsp;&nbsp; CSS/&nbsp;&nbsp;&nbsp; Javascript/&nbsp;&nbsp;&nbsp; Node.js/&nbsp;&nbsp;&nbsp; Premiere_Pro/&nbsp;&nbsp;&nbsp; After_Effects/&nbsp;&nbsp;&nbsp; Cinema4D/</div>',
+        '<div class="textline">Twitter: <a href="htttps://www.twitter.com/notKazuooo">@NotKazuooo</a></div><div class="textline">Youtube: <a href="htttps://www.youtube.com/UCBx4VWbklnydU9egczZkHAQ">Kazuo</a></div><div class="textline">Mail: <a href="mailto:kazuoedits@gmail.com">KazuoEdits</a></div>']
         var speed = 160;
         function typeWriter() {
             if (i < cmds[0].length) {
