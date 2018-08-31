@@ -1,38 +1,120 @@
 body {
-    background-color: #2f0a24;
+    background-color: black;
     margin: 0px;
-    overflow:hidden;
+    overflow: hidden;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #logo {
-    position: absolute;
-    width: 8rem;
-    z-index: 1;
-    margin-top: 3em;
-    margin-left: 3em;
+    width: 10rem;
 }
 
-#sliced {
-    position: absolute;
-    border-bottom: 100vh solid #151414;
-    border-right: 26em solid transparent;
-    height: 0;
-    width: 49vw;
-    z-index: 0;
-    transform: scale(1, -1);
-}
-
-#typewriter {
-    margin-top: 0em;
-    position: absolute;
-    z-index: -2;
-    left: 55em;
+#name {
     color: white;
-    line-break: break-word;
-    line-height: 1.95em;
     font-family: 'Ubuntu', sans-serif;
-    filter: blur(1.3px);
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-  }
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+#console {
+    background-color: #300924;
+    height: 40vh;
+    width: 50vw;
+    border-radius: 20px 20px 10px 10px;
+}
+
+#menuBar {
+    background-color: #44423d;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    border-radius: 2px 2px 0 0;
+}
+
+#menuBtns {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    align-content: space-between;
+    margin-left: 0.2em;
+}
+
+.ubuntuBtn {
+    background: #6f6e68; /* Old browsers */
+    background: -moz-linear-gradient(top, #6f6e68 0%, #58564e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #6f6e68 0%, #58564e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #6f6e68 0%, #58564e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6f6e68', endColorstr='#58564e', GradientType=0); /* IE6-9 */
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 3px;
+    margin-left: 3px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeBtn {
+    background: #e98b6f; /* Old browsers */
+    background: -moz-linear-gradient(top, #e98b6f 0%, #d54e1e 68%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e98b6f 0%, #d54e1e 68%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e98b6f 0%, #d54e1e 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e98b6f', endColorstr='#d54e1e', GradientType=0); /* IE6-9 */
+    text-align: center;
+}
+
+#terminalTitle {
+    margin: 0;
+    margin-left: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 0.75em;
+    color: #dfdace
+}
+
+#host {
+    margin-top: 0.5em;
+    margin-left: 0.2em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #75da33;
+}
+
+#wobbly {
+    color: #719bc5;
+}
+
+#blinker{
+    border-style: solid;
+    border-width: 0 2px 0 0;
+    color:#dfdace;
+    animation: blink-animation 1.5s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
