@@ -34,10 +34,43 @@
                     </div>
                     <p id="terminalTitle">kazuo@internet: ~</p>
                 </div>
-                <div id="host">kazuo@internet<span style="color:#dfdace">: </span><span id="wobbly">~</span><span style="color:#dfdace">$</span><span id="command" style="color:#dfdace"></span>  <span id="blinker"></span></div>
+                <div id="term">
+                    <div class="host">kazuo@internet<span style="color:#dfdace">: </span><span class="wobbly">~</span><span
+                            style="color:#dfdace">$</span><div class="command" id="cmd0" style="color:#dfdace"></div>
+                        <div class="blinker"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var i = 0;
+        var inserted = 0;
+        var cmds = ['whoami', 'finger kazuo'];
+        var elems = ['<div class="textline">kazuo</div>', '<div  class="textline">Login: kazuo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name: Alessandro Giannetti<br />Dedication: /student/it&nbsp;&nbsp;&nbsp;&nbsp; Location: /spain/valencia</div>']
+        var speed = 160;
+        function typeWriter() {
+            if (i < cmds[0].length) {
+                document.getElementById("cmd" + inserted).innerHTML += cmds[0].charAt(i)
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                document.getElementsByClassName("blinker")[0].parentNode.removeChild(document.getElementsByClassName('blinker')[0]);
+                i = 0;
+                inserted += 1
+                var host = `<div class="host">kazuo@internet<span style="color:#dfdace">: </span><span class="wobbly">~</span><span style="color:#dfdace">$</span><div class="command" id="cmd${inserted}" style="color:#dfdace"></div><div class="blinker"></div></div>`
+                document.getElementById("term").innerHTML += elems[0] + host
+                cmds.shift()
+                elems.shift()
+                setTimeout(() => {
+                    setTimeout(typeWriter, speed)
+                }, 250)
+            }
+        }
+        typeWriter();
+
+    </script>
 </body>
 
 </html>
