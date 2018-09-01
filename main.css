@@ -33,7 +33,8 @@ body {
     background-color: #300924;
     height: 40vh;
     width: 50vw;
-    min-width: 187px;
+    min-width: 305px;
+    min-height: 380px;
     border-radius: 20px 20px 10px 10px;
 }
 
